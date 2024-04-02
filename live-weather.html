@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div class="hmenu">
+      <div class="logo">
+        <img src="./images/monarchlogo.png" alt="">
+      </div>
+      <div class="pages">
+        <div class="page" id="livepage">
+          <p><a href="./live-weather.html">Live Weather</a></p>
+        </div>
+        <div class="page" id="currentpage">
+          <p><a href="./current-alerts.html">Current Alerts</a></p>
+        </div>
+        <div class="page" id="forecastpage">
+          <p><a href="./forecast.html">Forecast</a></p>
+        </div>
+        <div class="page">
+          <p>Storm Reports</p>
+        </div>
+      </div>
+      <div class="slogan">
+        <span style="color:var(--org-header-color); background-color:rgba(0, 0, 0, 0); font-size:24px; font-family:Arial, sans-serif, serif, EmojiFont;">MonarchView™</span><br>
+        <span style="color:var(--org-header-color); background-color:rgba(0, 0, 0, 0); font-size:12px; font-family:Arial, sans-serif, serif, EmojiFont;">Where Weather Meets Business Strategy</span>
+      </div>
+    </div>
+    <div class="sliderDiv">
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="side-legend-fcst">
+          <p class="side-legend-title" id="legend-title-text">Base Reflectivity Radar</p>
+          <p class="side-legend-subtitle" id="legend-subtitle-text">United States Only</p>
+          <div><img src="./images/radarlegend-final.png" style="max-height:40vh;"></div>
+          <div id="legend-items">
+
+          </div>
+        </div>
+      </div>
+      <div class="sliderOverlay">
+        <p id="currentDate" class="heading-jumbo-small-map-new">12:00 UTC March 28, 2024</p>
+        <input type="range" id="dateSlider" class="slider-new" min="0" max="36" value="36" step="1">
+        <div id="sliderRange"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src='./js/basic-fns.js'></script>
+    <script type="module" src='./js/live-layers.js'></script>
+  </body>
+</html>
